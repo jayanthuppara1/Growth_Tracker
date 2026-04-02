@@ -6,12 +6,8 @@
   <title>60 Day Growth Tracker</title>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
   <style>
-    :root,[data-theme="light"]{
-      --bg:#f7f5f0;--surface:#fffdf9;--surface-2:#f1ede6;--border:#ddd6cc;--text:#231f18;--muted:#716b63;--primary:#0d6b6f;--primary-soft:#d8ecea;--success:#4a7f2c;--warn:#b88310;--danger:#a94753;--shadow:0 10px 30px rgba(35,31,24,.08);--radius:18px;--radius-sm:12px;
-    }
-    [data-theme="dark"]{
-      --bg:#121110;--surface:#1b1917;--surface-2:#26221f;--border:#3a3530;--text:#ece6dc;--muted:#ada59a;--primary:#5aa4ae;--primary-soft:#243638;--success:#8cc361;--warn:#e0b04f;--danger:#e0848f;--shadow:0 16px 38px rgba(0,0,0,.32);
-    }
+    :root,[data-theme="light"]{--bg:#f7f5f0;--surface:#fffdf9;--surface-2:#f1ede6;--border:#ddd6cc;--text:#231f18;--muted:#716b63;--primary:#0d6b6f;--primary-soft:#d8ecea;--success:#4a7f2c;--warn:#b88310;--danger:#a94753;--shadow:0 10px 30px rgba(35,31,24,.08);--radius:18px}
+    [data-theme="dark"]{--bg:#121110;--surface:#1b1917;--surface-2:#26221f;--border:#3a3530;--text:#ece6dc;--muted:#ada59a;--primary:#5aa4ae;--primary-soft:#243638;--success:#8cc361;--warn:#e0b04f;--danger:#e0848f;--shadow:0 16px 38px rgba(0,0,0,.32)}
     *{box-sizing:border-box;margin:0;padding:0} body{font-family:'Satoshi',sans-serif;background:var(--bg);color:var(--text);line-height:1.5} button,input,select{font:inherit} button{cursor:pointer;border:none;background:none}
     .app{max-width:1380px;margin:0 auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.brand{display:flex;gap:12px;align-items:center}.logo{width:44px;height:44px;border-radius:14px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center}.brand h1{font-family:'Boska',serif;font-size:2rem;line-height:1}.brand p{color:var(--muted);font-size:.95rem}.theme{width:46px;height:46px;border-radius:50%;background:var(--surface);border:1px solid var(--border)}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-bottom:18px}.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}.hero-copy,.hero-side,.card{padding:22px}.eyebrow{display:inline-block;background:var(--primary-soft);color:var(--primary);padding:8px 12px;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.hero h2{font-family:'Boska',serif;font-size:clamp(2rem,4vw,3.5rem);line-height:.95;margin-top:14px;max-width:9ch}.hero p{margin-top:14px;color:var(--muted);max-width:62ch}
@@ -23,7 +19,7 @@
     .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}.filters select{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--surface)}
     .table-wrap{overflow:auto;border:1px solid var(--border);border-radius:16px}.table{width:100%;min-width:1180px}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);text-align:left}.table th{position:sticky;top:0;background:var(--surface-2);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.table tr:nth-child(odd) td{background:color-mix(in srgb,var(--surface) 80%,var(--surface-2))}
     .table input[type="number"],.table input[type="text"]{width:100%;padding:9px 10px;border-radius:10px;border:1px solid var(--border);background:var(--surface)}.table input[type="checkbox"]{width:18px;height:18px;accent-color:var(--primary)}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:800}.good{background:color-mix(in srgb,var(--success) 18%, transparent);color:var(--success)}.warn{background:color-mix(in srgb,var(--warn) 18%, transparent);color:var(--warn)}.bad{background:color-mix(in srgb,var(--danger) 18%, transparent);color:var(--danger)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:800}.good{background:color-mix(in srgb,var(--success) 18%, transparent);color:var(--success)}.warn{background:color-mix(in srgb,var(--warn) 18%, transparent);color:var(--warn)}
     .milestones{display:grid;gap:10px}.milestone{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border-radius:14px;background:var(--surface-2)}.milestone small{display:block;color:var(--muted);margin-top:4px}.status{margin-top:12px;color:var(--muted);font-size:.92rem}
     @media (max-width:1000px){.hero,.layout{grid-template-columns:1fr}} @media (max-width:700px){.app{padding:14px}.stats,.summary{grid-template-columns:1fr}.toolbar,.filters{flex-direction:column;align-items:stretch}}
   </style>
@@ -33,16 +29,16 @@
     <header class="top">
       <div class="brand">
         <div class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16"/><path d="M6 15l4-5 3 3 5-7"/></svg></div>
-        <div><h1>60 Day Growth Tracker</h1><p>Simple, clean, sorted, and auto-saved in your browser</p></div>
+        <div><h1>60 Day Growth Tracker</h1><p>Clean GitHub Pages version with browser auto-save only</p></div>
       </div>
       <button class="theme" id="themeBtn" aria-label="Toggle theme"></button>
     </header>
 
     <section class="hero">
       <div class="panel hero-copy">
-        <span class="eyebrow">Daily system</span>
-        <h2>Track what matters every day.</h2>
-        <p>This version is simplified for daily use: job applications toward 900, weight from 86 kg to 80 kg, workouts, running or walking, clean eating, cheat days, conferences, and hikes over 60 days.</p>
+        <span class="eyebrow">Auto-save version</span>
+        <h2>Simple tracker. No extra buttons.</h2>
+        <p>This version is simplified for daily use: job applications toward 900, weight from 86 kg to 80 kg, workouts, running or walking, clean eating, cheat days, conferences, and hikes over 60 days. It saves automatically in the browser after every change.</p>
         <div class="stats">
           <div class="stat"><span>Applications</span><strong>900 total</strong></div>
           <div class="stat"><span>Weight goal</span><strong>86 → 80 kg</strong></div>
@@ -61,7 +57,7 @@
         </div>
         <div class="progress-wrap"><span>Applications progress</span><div class="bar"><i id="appBar"></i></div></div>
         <div class="progress-wrap"><span>Weight progress</span><div class="bar"><i id="weightBar"></i></div></div>
-        <div class="status" id="saveStatus">Auto-save is on in this browser.</div>
+        <div class="status" id="saveStatus">Auto-save is on in this browser and saves after every change.</div>
       </div>
     </section>
 
@@ -73,7 +69,6 @@
           <button class="btn btn-primary" id="todayBtn">Start today</button>
           <button class="btn btn-secondary" id="sampleBtn">Load sample</button>
           <button class="btn btn-secondary" id="clearBtn">Clear all</button>
-          <button class="btn btn-secondary" id="downloadBtn">Download backup</button>
         </div>
         <div class="filters">
           <select id="filterMode">
@@ -102,16 +97,16 @@
   </div>
 
   <script>
-    const STORAGE_KEY = 'growth_tracker_v2';
+    const STORAGE_KEY = 'growth_tracker_v3';
     const totalDays = 60;
     const startWeight = 86;
     const goalWeight = 80;
     const goalApps = 900;
-    const goalCheat = 5;
     const tbody = document.getElementById('tbody');
     const milestonesEl = document.getElementById('milestones');
     const startDateEl = document.getElementById('startDate');
     const filterEl = document.getElementById('filterMode');
+    const saveStatus = document.getElementById('saveStatus');
     const milestoneTargets = [
       {day:10, apps:150, weight:85, title:'Foundation'},
       {day:20, apps:300, weight:84, title:'Rhythm'},
@@ -127,19 +122,29 @@
     }
 
     function save(){
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({rows,startDate:startDateEl.value,theme:document.documentElement.getAttribute('data-theme') || 'light'}));
-      document.getElementById('saveStatus').textContent = 'Saved automatically in this browser.';
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({rows,startDate:startDateEl.value,theme:document.documentElement.getAttribute('data-theme') || 'light'}));
+        saveStatus.textContent = 'Saved automatically in this browser.';
+      } catch (e) {
+        saveStatus.textContent = 'Auto-save failed here. Use regular Chrome or Edge, not private mode.';
+      }
     }
 
     function load(){
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if(raw){
-        const data = JSON.parse(raw);
-        rows = data.rows || newRows();
-        startDateEl.value = data.startDate || '';
-        document.documentElement.setAttribute('data-theme', data.theme || 'light');
-      } else {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if(raw){
+          const data = JSON.parse(raw);
+          rows = Array.isArray(data.rows) ? data.rows : newRows();
+          startDateEl.value = data.startDate || '';
+          document.documentElement.setAttribute('data-theme', data.theme || 'light');
+          saveStatus.textContent = 'Previous data restored automatically.';
+        } else {
+          rows = newRows();
+        }
+      } catch (e) {
         rows = newRows();
+        saveStatus.textContent = 'Could not restore old data. Starting fresh.';
       }
     }
 
@@ -155,7 +160,7 @@
     }
 
     function rowFilled(r){
-      return r.weight !== '' || r.applications !== '' || r.workout || r.cardio || r.clean || r.cheat || r.conference || r.hike || r.notes.trim();
+      return r.weight !== '' || r.applications !== '' || r.workout || r.cardio || r.clean || r.cheat || r.conference || r.hike || String(r.notes || '').trim();
     }
 
     function visibleRows(){
@@ -185,7 +190,7 @@
           <td><input type="checkbox" ${r.cheat?'checked':''} data-day="${r.day}" data-field="cheat"></td>
           <td><input type="checkbox" ${r.conference?'checked':''} data-day="${r.day}" data-field="conference"></td>
           <td><input type="checkbox" ${r.hike?'checked':''} data-day="${r.day}" data-field="hike"></td>
-          <td><input type="text" value="${r.notes}" data-day="${r.day}" data-field="notes"></td>
+          <td><input type="text" value="${r.notes || ''}" data-day="${r.day}" data-field="notes"></td>
         </tr>`).join('');
       tbody.querySelectorAll('input').forEach(el=>{
         el.addEventListener('input', updateRow);
@@ -219,12 +224,12 @@
       document.getElementById('cheatUsed').textContent = `${cheat}/5`;
       document.getElementById('appBar').style.width = `${Math.min(100,(totalApps/goalApps)*100)}%`;
       document.getElementById('weightBar').style.width = `${Math.max(0,Math.min(100,((startWeight-currentWeight)/(startWeight-goalWeight))*100))}%`;
-      renderMilestones(totalApps, currentWeight, clean, workouts, cardio, cheat);
+      renderMilestones();
     }
 
     function milestonePill(ok){ return ok ? '<span class="pill good">On track</span>' : '<span class="pill warn">Needs push</span>'; }
 
-    function renderMilestones(totalApps, currentWeight, clean, workouts, cardio, cheat){
+    function renderMilestones(){
       milestonesEl.innerHTML = milestoneTargets.map(m=>{
         const slice = rows.slice(0,m.day);
         const apps = slice.reduce((sum,r)=>sum + (parseInt(r.applications)||0),0);
@@ -246,10 +251,6 @@
       rows[8].conference = true; rows[9].notes = 'Strong week'; render();
     });
     document.getElementById('clearBtn').addEventListener('click', ()=>{ rows = newRows(); startDateEl.value=''; render(); });
-    document.getElementById('downloadBtn').addEventListener('click', ()=>{
-      const blob = new Blob([JSON.stringify({rows,startDate:startDateEl.value}, null, 2)], {type:'application/json'});
-      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'growth-tracker-backup.json'; a.click();
-    });
     startDateEl.addEventListener('change', ()=>{ applyStartDate(); save(); });
     filterEl.addEventListener('change', renderTable);
     document.getElementById('themeBtn').addEventListener('click', ()=>{
@@ -257,6 +258,7 @@
       document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
       save();
     });
+    window.addEventListener('beforeunload', save);
 
     load();
     render();
